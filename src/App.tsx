@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <GridItem area="main">
           <Flex direction="column" flex="1">
             <Hero />
+            <Navbar />
           </Flex>
         </GridItem>
         <GridItem area="footer">

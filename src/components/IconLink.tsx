@@ -1,10 +1,11 @@
-import { HStack } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
 
 interface Props {
   icon: IconType;
   href: string;
   label?: string;
+  size?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
 }
 
@@ -12,12 +13,18 @@ const IconLink = ({
   icon: IconComponent,
   href,
   label,
-  target = "_blank",
+  size = "16px",
+  target = "_self",
 }: Props) => {
   return (
     <a href={href} target={target}>
       <HStack>
-        <IconComponent aria-hidden="true" /> {label && <span>{label}</span>}
+        <IconComponent aria-hidden="true" fontSize={size} />
+        {label && (
+          <Text textTransform="capitalize" fontSize={size}>
+            {label}
+          </Text>
+        )}
       </HStack>
     </a>
   );

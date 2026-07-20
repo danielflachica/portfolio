@@ -27,40 +27,44 @@ const Hero = () => {
   };
 
   return (
-    <Container alignContent="center" bg="bg.emphasized" height="80dvh">
-      <Flex px={{ base: 2, md: 10 }}>
-        <VStack align={{ base: "center", md: "flex-start" }} gap={8}>
-          <Heading fontWeight="bold" size={{ base: "5xl", md: "6xl" }}>
-            Hi! I'm Daniel
-          </Heading>
-          <Typewriter options={twConfig} />
-          <Text textAlign={{ base: "center", md: "left" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            pellentesque turpis mi, eu vehicula justo efficitur sed. Nunc et
-            pors sodales volutpat.
-          </Text>
-          <ButtonGroup colorPalette="blue">
-            <Button>View my Work</Button>
-            <Button variant="outline">Download CV</Button>
-          </ButtonGroup>
-          <HStack color="fg.muted">
-            <LuMapPin /> Manila, Philippines
-            <Middot />
-            <ButtonGroup gap={3}>
-              <IconLink
-                icon={LuGithub}
-                href="https://github.com/danielflachica"
-              />
-              <IconLink
-                icon={LuLinkedin}
-                href="https://www.linkedin.com/in/danielflachica"
-              />
+    <Box bg="bg.emphasized" px={{ base: 2, md: 10 }}>
+      <Container alignContent="center" height={{ base: "97dvh", md: "85dvh" }}>
+        <Flex>
+          <VStack align={{ base: "center", md: "flex-start" }} gap={8}>
+            <Heading fontWeight="bold" size={{ base: "5xl", md: "6xl" }}>
+              Hi! I'm Daniel
+            </Heading>
+            <Typewriter options={twConfig} />
+            <Text textAlign={{ base: "center", md: "left" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              pellentesque turpis mi, eu vehicula justo efficitur sed. Nunc et
+              pors sodales volutpat.
+            </Text>
+            <ButtonGroup colorPalette="blue">
+              <Button>View my Work</Button>
+              <Button variant="outline">Download CV</Button>
             </ButtonGroup>
-          </HStack>
-        </VStack>
-        <Box hideBelow="md" width="50%"></Box>
-      </Flex>
-    </Container>
+            <HStack color="fg.muted">
+              <LuMapPin /> Manila, Philippines
+              <Middot />
+              <ButtonGroup gap={3}>
+                <IconLink
+                  icon={LuGithub}
+                  href="https://github.com/danielflachica"
+                  target="_blank"
+                />
+                <IconLink
+                  icon={LuLinkedin}
+                  href="https://www.linkedin.com/in/danielflachica"
+                  target="_blank"
+                />
+              </ButtonGroup>
+            </HStack>
+          </VStack>
+          <Box hideBelow="md" width="50%"></Box>
+        </Flex>
+      </Container>
+    </Box>
   );
 };
 
