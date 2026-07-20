@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <Container
       alignContent="center"
-      height={{ base: "97dvh", md: "85dvh" }}
+      height={{ base: "92dvh", md: "70dvh" }}
       px={0}
     >
       <Flex>

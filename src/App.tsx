@@ -20,10 +20,18 @@ function App() {
           <Header />
         </GridItem>
         <GridItem area="main">
-          <Section bg="bg.emphasized">
+          <Section
+            name="hero"
+            index={0}
+            bg="bg.emphasized"
+            displayHeader={false}
+          >
             <Hero />
           </Section>
           <Navbar />
+          <Section name="about" index={1}>
+            About me!
+          </Section>
         </GridItem>
         <GridItem area="footer">
           <Footer />
