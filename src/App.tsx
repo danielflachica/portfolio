@@ -1,9 +1,10 @@
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Section from "./components/Section";
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
           <Header />
         </GridItem>
         <GridItem area="main">
-          <Flex direction="column" flex="1">
+          <Section bg="bg.emphasized">
             <Hero />
-            <Navbar />
-          </Flex>
+          </Section>
+          <Navbar />
         </GridItem>
         <GridItem area="footer">
           <Footer />
