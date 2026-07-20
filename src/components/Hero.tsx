@@ -36,8 +36,8 @@ const Hero = () => {
             pors sodales volutpat.
           </Text>
           <ButtonGroup colorPalette="blue">
-            <Button>Get in Touch with me</Button>
-            <Button variant="outline">View my Work</Button>
+            <Button>View my Work</Button>
+            <Button variant="outline">Download CV</Button>
           </ButtonGroup>
         </VStack>
         <Box hideBelow="md" width="50%"></Box>
