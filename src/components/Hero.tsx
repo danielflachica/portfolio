@@ -26,7 +26,9 @@ const Hero = () => {
     <Container alignContent="center" bg="bg.emphasized" height="80dvh">
       <Flex px={{ base: 2, md: 10 }}>
         <VStack align={{ base: "center", md: "flex-start" }} gap={8}>
-          <Heading size={{ base: "5xl", md: "6xl" }}>Hi! I'm Daniel</Heading>
+          <Heading fontWeight="bold" size={{ base: "5xl", md: "6xl" }}>
+            Hi! I'm Daniel
+          </Heading>
           <Typewriter options={twConfig} />
           <Text textAlign={{ base: "center", md: "left" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
