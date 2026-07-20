@@ -7,8 +7,12 @@ import {
   ButtonGroup,
   Button,
   Flex,
+  HStack,
 } from "@chakra-ui/react";
+import { LuGithub, LuLinkedin, LuMapPin } from "react-icons/lu";
 import Typewriter, { type Options } from "typewriter-effect";
+import Middot from "./Middot";
+import IconLink from "./IconLink";
 
 const Hero = () => {
   const twConfig: Options = {
@@ -39,6 +43,20 @@ const Hero = () => {
             <Button>View my Work</Button>
             <Button variant="outline">Download CV</Button>
           </ButtonGroup>
+          <HStack color="fg.muted">
+            <LuMapPin /> Manila, Philippines
+            <Middot />
+            <ButtonGroup gap={3}>
+              <IconLink
+                icon={LuGithub}
+                href="https://github.com/danielflachica"
+              />
+              <IconLink
+                icon={LuLinkedin}
+                href="https://www.linkedin.com/in/danielflachica"
+              />
+            </ButtonGroup>
+          </HStack>
         </VStack>
         <Box hideBelow="md" width="50%"></Box>
       </Flex>
