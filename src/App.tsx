@@ -1,7 +1,8 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
         <GridItem area="header">
           <Header />
         </GridItem>
-        <GridItem area="main">Main</GridItem>
+        <GridItem area="main">
+          <Flex direction="column" flex="1">
+            <Hero />
+          </Flex>
+        </GridItem>
         <GridItem area="footer">
           <Footer />
         </GridItem>
