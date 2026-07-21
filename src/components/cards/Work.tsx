@@ -6,6 +6,7 @@ import {
   List,
   Stack,
   Text,
+  Wrap,
 } from "@chakra-ui/react";
 import type { WorkExperience } from "@/types/WorkExperience";
 
@@ -67,7 +68,6 @@ const WorkCard = ({
       <Card.Body pt={4}>
         {/* Work Summary */}
         <Text color="fg.muted">{summary}</Text>
-
         {/* Details in Bullets */}
         {details && (
           <List.Root
@@ -88,16 +88,15 @@ const WorkCard = ({
             ))}
           </List.Root>
         )}
-
         {/* Skill Tags */}
         {skills && (
-          <HStack mt={4}>
+          <Wrap mt={4} rowGap={2} columnGap={2}>
             {skills.map((skill) => (
-              <Badge key={skill} size="md">
+              <Badge key={skill} colorPalette="blue" size="md">
                 {skill}
               </Badge>
             ))}
-          </HStack>
+          </Wrap>
         )}
       </Card.Body>
     </Card.Root>
