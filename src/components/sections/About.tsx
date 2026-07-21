@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import profilePic from "@/assets/profile_pic.jpeg";
+import profilePic from "../../assets/profile_pic.jpg";
 
 const About = () => {
   const aboutMeCode = `const me = {
