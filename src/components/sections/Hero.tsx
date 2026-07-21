@@ -18,11 +18,7 @@ import Links from "@/data/links";
 
 const Hero = () => {
   const twConfig: Options = {
-    strings: [
-      "I build websites",
-      "I design solutions",
-      "And I\'m open to work!",
-    ],
+    strings: Me.taglines,
     autoStart: true,
     loop: true,
     cursor: "_",

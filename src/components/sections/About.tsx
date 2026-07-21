@@ -13,7 +13,7 @@ import Me from "@/data/about";
 import ProfilePic from "../../assets/profile_pic.jpg";
 
 const About = () => {
-  const { email, username, location, ...aboutMe } = Me; // Exclude properties from the "aboutMe" code string
+  const { email, username, location, taglines, ...aboutMe } = Me; // Exclude properties from the "aboutMe" code string
   const aboutMeCode =
     `const me = ` +
     JSON.stringify(aboutMe, null, 2).replace(/"([^"]+)":/g, "$1:");
@@ -42,7 +42,7 @@ const About = () => {
         {/* Description */}
         <Stack gap={4} mt={{ base: 3, md: 6 }}>
           <Text>
-            I am a software developer based in {location}. I build websites,
+            I'm a software developer based in {location}. I build websites,
             design solutions, and am open to collaboration.
           </Text>
           <Text>
