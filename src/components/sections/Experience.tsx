@@ -5,7 +5,7 @@ import work from "@/data/work";
 const Experience = () => {
   return (
     <Stack gap={{ base: 4, md: 8 }}>
-      {work.map(({ role, company, start, end, summary, bullets }) => (
+      {work.map(({ role, company, start, end, summary, details, skills }) => (
         <WorkCard
           key={`${role}-${company}`}
           role={role}
@@ -13,7 +13,8 @@ const Experience = () => {
           start={start}
           end={end}
           summary={summary}
-          bullets={bullets}
+          details={details}
+          skills={skills}
         />
       ))}
     </Stack>

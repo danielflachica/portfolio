@@ -4,5 +4,6 @@ export interface WorkExperience {
   start: string;
   end: string;
   summary: string;
-  bullets?: string[];
+  details?: string[];
+  skills?: string[];
 }

@@ -1,4 +1,12 @@
-import { Card, Heading, HStack, List, Stack, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Card,
+  Heading,
+  HStack,
+  List,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import type { WorkExperience } from "@/types/WorkExperience";
 
 const WorkCard = ({
@@ -7,7 +15,8 @@ const WorkCard = ({
   start,
   end,
   summary,
-  bullets,
+  details,
+  skills,
 }: WorkExperience) => {
   const duration = `${start} - ${end}`;
   return (
@@ -56,8 +65,11 @@ const WorkCard = ({
         </HStack>
       </Card.Header>
       <Card.Body pt={4}>
+        {/* Work Summary */}
         <Text color="fg.muted">{summary}</Text>
-        {bullets && (
+
+        {/* Details in Bullets */}
+        {details && (
           <List.Root
             as="ul"
             gap={2}
@@ -65,7 +77,7 @@ const WorkCard = ({
             listStyleType="circle"
             mt={4}
           >
-            {bullets.map((item) => (
+            {details.map((item) => (
               <List.Item
                 key={item.replaceAll(" ", "-")}
                 color="fg.muted"
@@ -75,6 +87,17 @@ const WorkCard = ({
               </List.Item>
             ))}
           </List.Root>
+        )}
+
+        {/* Skill Tags */}
+        {skills && (
+          <HStack mt={4}>
+            {skills.map((skill) => (
+              <Badge key={skill} size="md">
+                {skill}
+              </Badge>
+            ))}
+          </HStack>
         )}
       </Card.Body>
     </Card.Root>
