@@ -2,9 +2,10 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           </Section>
           <Navbar />
           <Section name="about" index={1}>
-            About me!
+            <About />
           </Section>
         </GridItem>
         <GridItem area="footer">

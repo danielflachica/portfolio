@@ -11,8 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { LuGithub, LuLinkedin, LuMapPin } from "react-icons/lu";
 import Typewriter, { type Options } from "typewriter-effect";
-import Middot from "./Middot";
-import IconLink from "./IconLink";
+import Middot from "../Middot";
+import IconLink from "../IconLink";
 
 const Hero = () => {
   const twConfig: Options = {
