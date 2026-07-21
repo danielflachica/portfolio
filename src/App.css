@@ -2,3 +2,9 @@
 .Typewriter__cursor {
   font-size: 22px !important;
 }
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* Safari support */
+}
