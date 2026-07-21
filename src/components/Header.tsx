@@ -8,7 +8,9 @@ const Header = () => {
       <Box px={2}>
         <LuGlobe />
       </Box>
-      <Heading size="sm">Daniel Lachica</Heading>
+      <Heading fontWeight="medium" size="sm">
+        Daniel Lachica
+      </Heading>
       <ColorModeButton size="xs" borderRadius={0} />
     </HStack>
   );
