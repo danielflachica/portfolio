@@ -9,75 +9,74 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import profilePic from "../../assets/profile_pic.jpg";
+import Me from "@/data/about";
+import ProfilePic from "../../assets/profile_pic.jpg";
 
 const About = () => {
-  const aboutMeCode = `const me = {
-  name: "Daniel Lachica",
-  alias: "Dan",
-  role: "Full-Stack Web Developer",
-  focus: ["Web", "Systems Design", "UI"],
-  coffee: true,
-}`;
+  const { email, username, location, ...aboutMe } = Me; // Exclude properties from the "aboutMe" code string
+  const aboutMeCode =
+    `const me = ` +
+    JSON.stringify(aboutMe, null, 2).replace(/"([^"]+)":/g, "$1:");
 
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spaceX={{ base: 0, md: 12 }}
-      spaceY={{ base: 8, md: 0 }}
+      spaceY={{ base: 6, md: 0 }}
     >
       <Box>
+        {/* Profile Card */}
+        <HStack gap={4}>
+          <Avatar.Root>
+            <Avatar.Fallback name={username} />
+            <Avatar.Image src={ProfilePic} />
+          </Avatar.Root>
+          <Stack gap={0}>
+            <Text fontWeight="medium">{Me.name}</Text>
+            <Text color="fg.muted" textStyle="sm">
+              {email}
+            </Text>
+          </Stack>
+        </HStack>
+
         {/* Description */}
-        <Stack gap={4}>
+        <Stack gap={4} mt={{ base: 3, md: 6 }}>
           <Text>
-            I am a software developer based in Manila, Philippines. I build
-            websites, design solutions, and am open to collaboration.
+            I am a software developer based in {location}. I build websites,
+            design solutions, and am open to collaboration.
           </Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
             delectus accusantium. Recusandae, veniam sit necessitatibus, laborum
-            illum dolorum obcaecati velit aspernatur non pariatur voluptas
-            quidem delectus. Neque tempore nostrum exercitationem!
+            illum dolorum obcaecati velit aspernatur non pariatur.
           </Text>
           <Text>
-            Veniam sit necessitatibus, laborum illum dolorum obcaecati velit
-            aspernatur non pariatur voluptas quidem delectus. Neque tempore
+            Veniam sit necessitatibus, oluptas quidem delectus. Neque tempore
             nostrum exercitationem.
           </Text>
         </Stack>
       </Box>
 
       <Box>
-        {/* Profile Card */}
-        <HStack gap={4}>
-          <Avatar.Root>
-            <Avatar.Fallback name="Daniel Lachica" />
-            <Avatar.Image src={profilePic} />
-          </Avatar.Root>
-          <Stack gap={0}>
-            <Text fontWeight="medium">Daniel Lachica</Text>
-            <Text color="fg.muted" textStyle="sm">
-              daniel.lachica82@gmail.com
-            </Text>
-          </Stack>
-        </HStack>
-
         {/* Overview */}
-        <Card.Root mt={8} mb={5}>
+        <Card.Root>
           <Card.Body>
             <HStack>
               <Circle bg="red.500" size="10px" />
               <Circle bg="green.500" size="10px" />
               <Circle bg="bg.emphasized" size="10px" />
-              {/* <Text ml={2} color="fg.muted">
-                ~/about.ts
-              </Text> */}
-              <Code bg="none" color="fg.muted" ml={2} p={0}>
+              <Code color="fg.muted" fontSize="small" ml={2} variant="subtle">
                 ~/about.ts
               </Code>
             </HStack>
             <Box mt={2} overflowX="auto">
-              <Code bg="none" color="fg.muted" p={0}>
+              <Code
+                color="fg.muted"
+                fontSize="small"
+                p={0}
+                variant="plain"
+                w="100%"
+              >
                 <pre>{aboutMeCode}</pre>
               </Code>
             </Box>

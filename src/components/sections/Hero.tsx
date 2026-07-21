@@ -13,6 +13,8 @@ import { LuGithub, LuLinkedin, LuMapPin } from "react-icons/lu";
 import Typewriter, { type Options } from "typewriter-effect";
 import Middot from "../Middot";
 import IconLink from "../IconLink";
+import Me from "@/data/about";
+import Links from "@/data/links";
 
 const Hero = () => {
   const twConfig: Options = {
@@ -35,7 +37,7 @@ const Hero = () => {
       <Flex>
         <VStack align={{ base: "center", md: "flex-start" }} gap={8}>
           <Heading fontWeight="bold" size={{ base: "5xl", md: "6xl" }}>
-            Hi! I'm Daniel
+            Hi! I'm {Me.name.split(" ")[0]}
           </Heading>
           <Typewriter options={twConfig} />
           <Text textAlign={{ base: "center", md: "left" }}>
@@ -48,17 +50,17 @@ const Hero = () => {
             <Button variant="outline">Download CV</Button>
           </ButtonGroup>
           <HStack color="fg.muted">
-            <LuMapPin /> Manila, Philippines
+            <LuMapPin /> {Me.location}
             <Middot />
             <ButtonGroup gap={3}>
               <IconLink
                 icon={LuGithub}
-                href="https://github.com/danielflachica"
+                href={Links.github.profile}
                 target="_blank"
               />
               <IconLink
                 icon={LuLinkedin}
-                href="https://www.linkedin.com/in/danielflachica"
+                href={Links.linkedin}
                 target="_blank"
               />
             </ButtonGroup>

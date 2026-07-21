@@ -1,6 +1,7 @@
 import { Box, Heading, HStack } from "@chakra-ui/react";
 import { LuGlobe } from "react-icons/lu";
 import { ColorModeButton } from "@/components/ui/color-mode";
+import Me from "@/data/about";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         <LuGlobe />
       </Box>
       <Heading fontWeight="medium" size="sm">
-        Daniel Lachica
+        {Me.name}
       </Heading>
       <ColorModeButton size="xs" borderRadius={0} />
     </HStack>
