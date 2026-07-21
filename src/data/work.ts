@@ -7,7 +7,7 @@ const work: WorkExperience[] = [
     start: "2022",
     end: "Present",
     summary:
-      "Designed and developed enterprise systems for clients in healthcare, operations, sanitation, logistics, marketing, and non-profits using Caspio's proprietary low-code platform.",
+      "Designed and developed enterprise systems for clients in healthcare, operations, sanitation, logistics, marketing, and non-profits using Caspio's proprietary low-code platform",
     bullets: [
       "Spearheaded full-stack development of the SET3 operations management app, working with frontend components and backend logic to improve responsiveness by 62%",
       "Optimized performance of a scheduling app for SAGE Services, a non-profit organization, improving average page speed load time by 67%",

@@ -24,35 +24,39 @@ const WorkCard = ({
             <Heading
               hideBelow="md"
               size="lg"
-              color="fg.muted"
+              color="fg"
               textTransform="capitalize"
             >
               {company}
             </Heading>
+            {/* Mobile */}
             <Text
               hideFrom="md"
-              color="fg.muted"
+              color="fg"
               fontSize="sm"
               textTransform="capitalize"
               fontStyle="italic"
             >
               {company} ({duration})
             </Text>
+            {/* End Mobile */}
           </Stack>
+          {/* Desktop */}
           <Text
             hideBelow="md"
-            fontSize="lg"
-            fontWeight="medium"
-            color="fg.muted"
+            fontSize="md"
+            fontWeight="bold"
+            color="fg"
             textTransform="capitalize"
             wordSpacing={4}
           >
             {duration}
           </Text>
+          {/* End Desktop */}
         </HStack>
       </Card.Header>
-      <Card.Body color="fg.muted" pt={4}>
-        <Text>{summary}</Text>
+      <Card.Body pt={4}>
+        <Text color="fg.muted">{summary}</Text>
         {bullets && (
           <List.Root
             as="ul"
@@ -64,7 +68,7 @@ const WorkCard = ({
             {bullets.map((item) => (
               <List.Item
                 key={item.replaceAll(" ", "-")}
-                color="fg.subtle"
+                color="fg.muted"
                 fontSize="sm"
               >
                 {item}
