@@ -7,6 +7,7 @@ import Section from "./components/Section";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
+import Education from "./components/sections/Education";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           </Section>
           <Section name="experience" index={2} title="Work Experience">
             <Experience />
+          </Section>
+          <Section name="education" index={3}>
+            <Education />
           </Section>
         </GridItem>
         <GridItem area="footer">
