@@ -1,8 +1,8 @@
 import type { Education } from "@/types/Education";
 import { Card, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import DateRange from "../DateRange";
 
 const EducationCard = ({ school, degree, award, start, end }: Education) => {
-  const duration = `${start} - ${end}`;
   return (
     <Card.Root>
       <Card.Header>
@@ -22,20 +22,20 @@ const EducationCard = ({ school, degree, award, start, end }: Education) => {
               textTransform="capitalize"
               fontStyle="italic"
             >
-              {duration}
+              <DateRange start={start} end={end} />
             </Text>
             {/* End Mobile */}
           </Stack>
           {/* Desktop */}
           <Text
+            as="div"
             hideBelow="md"
             fontSize="md"
             fontWeight="bold"
             color="fg"
             textTransform="capitalize"
-            wordSpacing={4}
           >
-            {duration}
+            <DateRange start={start} end={end} />
           </Text>
           {/* End Desktop */}
         </HStack>

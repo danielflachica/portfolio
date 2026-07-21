@@ -9,6 +9,7 @@ import {
   Wrap,
 } from "@chakra-ui/react";
 import type { WorkExperience } from "@/types/WorkExperience";
+import DateRange from "../DateRange";
 
 const WorkCard = ({
   role,
@@ -19,7 +20,6 @@ const WorkCard = ({
   details,
   skills,
 }: WorkExperience) => {
-  const duration = `${start} - ${end}`;
   return (
     <Card.Root>
       <Card.Header>
@@ -47,12 +47,13 @@ const WorkCard = ({
               textTransform="capitalize"
               fontStyle="italic"
             >
-              {company} ({duration})
+              {company} (<DateRange start={start} end={end} />)
             </Text>
             {/* End Mobile */}
           </Stack>
           {/* Desktop */}
           <Text
+            as="div"
             hideBelow="md"
             fontSize="md"
             fontWeight="bold"
@@ -60,7 +61,7 @@ const WorkCard = ({
             textTransform="capitalize"
             wordSpacing={4}
           >
-            {duration}
+            <DateRange start={start} end={end} />
           </Text>
           {/* End Desktop */}
         </HStack>
