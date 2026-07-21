@@ -39,7 +39,11 @@ const Section = ({
           <Text fontSize="sm" color="fg.muted" wordSpacing={10}>
             {index.toString().padStart(2, "0")} / {name}
           </Text>
-          <Heading size={{ base: "3xl", md: "4xl" }} textTransform="capitalize">
+          <Heading
+            size={{ base: "3xl", md: "4xl" }}
+            fontWeight="black"
+            textTransform="capitalize"
+          >
             {title ? title : name}
           </Heading>
           <Separator />

@@ -32,7 +32,7 @@ const Hero = () => {
     >
       <Flex>
         <VStack align={{ base: "center", md: "flex-start" }} gap={8}>
-          <Heading fontWeight="bold" size={{ base: "5xl", md: "6xl" }}>
+          <Heading fontWeight="black" size={{ base: "5xl", md: "6xl" }}>
             Hi! I'm {Me.name.split(" ")[0]}
           </Heading>
           <Typewriter options={twConfig} />
