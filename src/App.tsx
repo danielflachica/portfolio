@@ -8,6 +8,7 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
+import Skills from "./components/sections/Skills";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           </Section>
           <Section name="education" index={3}>
             <Education />
+          </Section>
+          <Section name="skills" index={4} title="Technical Skills">
+            <Skills />
           </Section>
         </GridItem>
         <GridItem area="footer">
