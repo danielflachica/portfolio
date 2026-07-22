@@ -35,6 +35,7 @@ import canva from "./canva.svg";
 import photoshop from "./photoshop.svg";
 import illustrator from "./illustrator.svg";
 import invision from "./invision.svg";
+import vite from "./vite.svg";
 
 export const logos = {
   react,
@@ -68,4 +69,5 @@ export const logos = {
   photoshop,
   illustrator,
   invision,
+  vite,
 };

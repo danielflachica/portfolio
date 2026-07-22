@@ -51,6 +51,7 @@ const skillCategories: SkillCategory[] = [
       { label: "GitLab", logo: logos.gitlab },
       { label: "Vercel", logo: logos.vercel },
       { label: "Jira", logo: logos.jira },
+      { label: "Vite", logo: logos.vite },
     ],
   },
   {
