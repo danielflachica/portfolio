@@ -1,5 +1,6 @@
 import { Card, Heading, SimpleGrid, Wrap } from "@chakra-ui/react";
-import skillCategories, { type SkillCategory } from "@/data/skills";
+import type { SkillCategory } from "@/types/SkillCategory";
+import skillCategories from "@/data/skills";
 import SkillTag from "../SkillTag";
 
 const Skills = () => {

@@ -1,10 +1,5 @@
-import type { Skill } from "@/types/Skill";
+import type { SkillCategory } from "@/types/SkillCategory";
 import { logos } from "@/assets/logos";
-
-export interface SkillCategory {
-  category: string;
-  skills: Skill[];
-}
 
 const skillCategories: SkillCategory[] = [
   {
