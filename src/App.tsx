@@ -49,6 +49,9 @@ function App() {
           <Section name="projects" index={5}>
             <Projects />
           </Section>
+          <Section name="contact" index={6} title="Get in Touch">
+            Contact me form
+          </Section>
         </GridItem>
         <GridItem area="footer">
           <Footer />
