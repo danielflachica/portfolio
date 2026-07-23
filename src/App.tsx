@@ -45,6 +45,9 @@ function App() {
           <Section name="skills" index={4} title="Technical Skills">
             <Skills />
           </Section>
+          <Section name="projects" index={5}>
+            My projects!
+          </Section>
         </GridItem>
         <GridItem area="footer">
           <Footer />
