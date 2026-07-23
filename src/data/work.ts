@@ -14,7 +14,14 @@ const workExperience: WorkExperience[] = [
       "Designed, developed, and tested features of a COVID-19 medical testing app for Snap Healthcare, resulting in a total of 830 additional billable hours for the company",
       "Proactively collaborated with various Project Managers, Quality Assurance Engineers, Business Analysts and Designers to meet customer requirements",
     ],
-    skills: ["PHP", "Bootstrap", "REST API", "JavaScript", "CSS", "Caspio"],
+    skills: [
+      { label: "PHP" },
+      { label: "Bootstrap" },
+      { label: "REST API" },
+      { label: "JavaScript" },
+      { label: "CSS" },
+      { label: "Caspio" },
+    ],
   },
   {
     role: "Full-Stack Web Developer",
@@ -35,7 +42,14 @@ const workExperience: WorkExperience[] = [
     end: "Mar 2018",
     summary:
       "Developed and documented an Employee Shuttle Reservation System (ESRS) for company-wide use",
-    skills: ["PHP", "Bootstrap", "MySQL", "HTML", "CSS", "JavaScript"],
+    skills: [
+      { label: "PHP" },
+      { label: "Bootstrap" },
+      { label: "MySQL" },
+      { label: "HTML" },
+      { label: "CSS" },
+      { label: "JavaScript" },
+    ],
   },
 ];
 

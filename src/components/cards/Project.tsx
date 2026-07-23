@@ -35,7 +35,12 @@ const ProjectCard = ({
         {skills && (
           <Wrap rowGap={2} columnGap={2} mt={4}>
             {skills.map((skill) => (
-              <SkillTag skill={skill} />
+              <SkillTag
+                key={skill.label}
+                skill={skill}
+                colorPalette="blue"
+                size="md"
+              />
             ))}
           </Wrap>
         )}

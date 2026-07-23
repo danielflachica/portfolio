@@ -1,5 +1,4 @@
 import {
-  Badge,
   Card,
   Heading,
   HStack,
@@ -10,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import type { WorkExperience } from "@/types/WorkExperience";
 import DateRange from "../DateRange";
+import SkillTag from "../SkillTag";
 
 interface Props {
   work: WorkExperience;
@@ -91,9 +91,12 @@ const WorkCard = ({
         {skills && (
           <Wrap mt={4} rowGap={2} columnGap={2}>
             {skills.map((skill) => (
-              <Badge key={skill} colorPalette="blue" size="md">
-                {skill}
-              </Badge>
+              <SkillTag
+                key={skill.label}
+                skill={skill}
+                colorPalette="blue"
+                size="md"
+              />
             ))}
           </Wrap>
         )}

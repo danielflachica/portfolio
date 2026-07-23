@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <Stack gap={4}>
       {projects.map((project) => (
-        <ProjectCard project={project} />
+        <ProjectCard key={project.name} project={project} />
       ))}
     </Stack>
   );

@@ -19,7 +19,12 @@ const Skills = () => {
           <Card.Body>
             <Wrap rowGap={2} columnGap={2}>
               {skills.map((skill) => (
-                <SkillTag skill={skill} />
+                <SkillTag
+                  key={skill.label}
+                  skill={skill}
+                  size="lg"
+                  variant="surface"
+                />
               ))}
             </Wrap>
           </Card.Body>
