@@ -5,5 +5,7 @@ export interface Project {
   description: string;
   photo?: string;
   link?: string;
+  start?: string;
+  end?: string;
   skills?: Skill[];
 }

@@ -1,15 +1,16 @@
 import type { Project } from "@/types/Project";
-import { Card, Flex, Heading, Image, Link, Wrap } from "@chakra-ui/react";
+import { Card, Flex, Heading, Image, Link, Text, Wrap } from "@chakra-ui/react";
+import { LuExternalLink } from "react-icons/lu";
 import defaultPhoto from "@/assets/projects/project-default-unsplash.jpg";
 import SkillTag from "../SkillTag";
-import { LuExternalLink } from "react-icons/lu";
+import DateRange from "../DateRange";
 
 interface Props {
   project: Project;
 }
 
 const ProjectCard = ({
-  project: { name, description, photo, link, skills },
+  project: { name, description, photo, link, start, end, skills },
 }: Props) => {
   return (
     <Card.Root flexDirection={{ base: "column", md: "row" }} overflow="hidden">
@@ -31,7 +32,14 @@ const ProjectCard = ({
             )}
           </Flex>
         </Card.Title>
-        <Card.Description>{description}</Card.Description>
+        <Card.Description>
+          {start && end && (
+            <Text color="fg" mb={2}>
+              <DateRange start={start} end={end} />
+            </Text>
+          )}
+          <Text>{description}</Text>
+        </Card.Description>
         {skills && (
           <Wrap rowGap={2} columnGap={2} mt={4}>
             {skills.map((skill) => (
