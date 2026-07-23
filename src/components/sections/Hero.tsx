@@ -41,7 +41,10 @@ const Hero = () => {
             pellentesque turpis mi, eu vehicula justo efficitur sed. Nunc et
             pors sodales volutpat.
           </Text>
-          <ButtonGroup colorPalette="blue">
+          <ButtonGroup
+            colorPalette="blue"
+            flexDirection={{ base: "column", sm: "row" }}
+          >
             <Button>View my Work</Button>
             <Button variant="outline">Download CV</Button>
           </ButtonGroup>
