@@ -8,7 +8,9 @@ interface Props {
 const SkillTag = ({ skill: { label, logo } }: Props) => {
   return (
     <Badge size="lg" variant="surface">
-      {logo && <Image src={logo} height="16px" width="16px" mr={1} />}
+      {logo && (
+        <Image src={logo} loading="lazy" height="16px" width="16px" mr={1} />
+      )}
       <Text>{label}</Text>
     </Badge>
   );
