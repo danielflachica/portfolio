@@ -11,15 +11,13 @@ import {
 import type { WorkExperience } from "@/types/WorkExperience";
 import DateRange from "../DateRange";
 
+interface Props {
+  work: WorkExperience;
+}
+
 const WorkCard = ({
-  role,
-  company,
-  start,
-  end,
-  summary,
-  details,
-  skills,
-}: WorkExperience) => {
+  work: { role, company, start, end, summary, details, skills },
+}: Props) => {
   return (
     <Card.Root>
       <Card.Header>

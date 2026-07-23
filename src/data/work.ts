@@ -1,6 +1,6 @@
 import type { WorkExperience } from "@/types/WorkExperience";
 
-const work: WorkExperience[] = [
+const workExperience: WorkExperience[] = [
   {
     role: "Web Application Developer",
     company: "Caspio",
@@ -39,4 +39,4 @@ const work: WorkExperience[] = [
   },
 ];
 
-export default work;
+export default workExperience;

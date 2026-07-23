@@ -2,7 +2,13 @@ import type { Education } from "@/types/Education";
 import { Card, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import DateRange from "../DateRange";
 
-const EducationCard = ({ school, degree, award, start, end }: Education) => {
+interface Props {
+  education: Education;
+}
+
+const EducationCard = ({
+  education: { school, degree, award, start, end },
+}: Props) => {
   return (
     <Card.Root>
       <Card.Header>

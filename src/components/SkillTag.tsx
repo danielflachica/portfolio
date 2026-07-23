@@ -1,7 +1,11 @@
 import type { Skill } from "@/types/Skill";
 import { Badge, Image, Text } from "@chakra-ui/react";
 
-const SkillTag = ({ label, logo }: Skill) => {
+interface Props {
+  skill: Skill;
+}
+
+const SkillTag = ({ skill: { label, logo } }: Props) => {
   return (
     <Badge size="lg" variant="surface">
       {logo && <Image src={logo} height="16px" width="16px" mr={1} />}
