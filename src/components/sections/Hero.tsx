@@ -44,6 +44,7 @@ const Hero = () => {
           <ButtonGroup
             colorPalette="blue"
             flexDirection={{ base: "column", sm: "row" }}
+            gap={3}
           >
             <Button>View my Work</Button>
             <Button variant="outline">Download CV</Button>
