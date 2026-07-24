@@ -9,7 +9,7 @@ import {
   Flex,
   HStack,
 } from "@chakra-ui/react";
-import { LuGithub, LuLinkedin, LuMapPin } from "react-icons/lu";
+import { FaSquareGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 import Typewriter, { type Options } from "typewriter-effect";
 import Middot from "../Middot";
 import IconLink from "../IconLink";
@@ -48,19 +48,25 @@ const Hero = () => {
             <Button>View my Work</Button>
             <Button variant="outline">Download CV</Button>
           </ButtonGroup>
-          <HStack color="fg.muted">
-            <LuMapPin /> {Me.location}
+          <HStack color="fg.muted" gap={3}>
+            <Text display="inline-flex" alignItems="center" gap={2}>
+              <FaLocationArrow /> {Me.location}
+            </Text>
             <Middot />
-            <ButtonGroup gap={3}>
+            <ButtonGroup gap={2}>
               <IconLink
-                icon={LuGithub}
+                icon={FaSquareGithub}
                 href={Links.github.profile}
+                size="18px"
                 target="_blank"
+                tooltip="GitHub"
               />
               <IconLink
-                icon={LuLinkedin}
+                icon={FaLinkedin}
                 href={Links.linkedin}
+                size="18px"
                 target="_blank"
+                tooltip="LinkedIn"
               />
             </ButtonGroup>
           </HStack>
