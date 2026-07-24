@@ -1,5 +1,6 @@
 import type { Project } from "@/types/Project";
 import { Card, Flex, Heading, Image, Link, Text, Wrap } from "@chakra-ui/react";
+import { Tooltip } from "@/components/ui/tooltip";
 import { LuExternalLink } from "react-icons/lu";
 import defaultPhoto from "@/assets/projects/project-default-unsplash.jpg";
 import SkillTag from "../SkillTag";
@@ -26,9 +27,15 @@ const ProjectCard = ({
           <Flex justifyContent="space-between" alignItems="flex-start" gap={4}>
             <Heading size="lg">{name}</Heading>
             {link && (
-              <Link href={link} target="_blank" mt="0.3em" flexShrink={0}>
-                <LuExternalLink />
-              </Link>
+              <Tooltip
+                content="Visit Project"
+                positioning={{ placement: "left" }}
+                showArrow
+              >
+                <Link href={link} target="_blank" mt="0.3em" flexShrink={0}>
+                  <LuExternalLink />
+                </Link>
+              </Tooltip>
             )}
           </Flex>
         </Card.Title>
