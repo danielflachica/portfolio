@@ -3,7 +3,7 @@ import { Button, Card, Field, Input, Stack, Textarea } from "@chakra-ui/react";
 const ContactForm = () => {
   return (
     <form>
-      <Card.Root maxW="lg" mx="auto">
+      <Card.Root>
         <Card.Header>
           <Card.Title>Contact Me</Card.Title>
           <Card.Description>
@@ -23,7 +23,11 @@ const ContactForm = () => {
               <Field.Label>
                 Email <Field.RequiredIndicator />
               </Field.Label>
-              <Input placeholder="e.g. juandelacruz@gmail.com" />
+              <Input
+                type="email"
+                inputMode="email"
+                placeholder="e.g. juandelacruz@gmail.com"
+              />
               <Field.ErrorText>This field is required</Field.ErrorText>
             </Field.Root>
             <Field.Root required>

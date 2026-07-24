@@ -21,7 +21,7 @@ const Contact = () => {
       gapX={{ base: 6, lg: 8 }}
       gapY={{ base: 6, md: 0 }}
     >
-      <VStack align="flex-start" gap={{ base: 4, md: 6 }} maxW="lg" mx="auto">
+      <VStack align="flex-start" gap={{ base: 4, md: 6 }}>
         <Heading size={{ base: "xl", md: "2xl" }} fontWeight="bold">
           Let's build something great!
         </Heading>

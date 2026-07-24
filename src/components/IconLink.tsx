@@ -29,7 +29,12 @@ const IconLink = ({
         <HStack>
           <IconComponent aria-hidden="true" size={iconSize} />
           {label && (
-            <Text color={color} fontSize={fontSize}>
+            <Text
+              color={color}
+              fontSize={fontSize}
+              truncate
+              maxW={{ base: "200px", md: "250px" }}
+            >
               {label}
             </Text>
           )}
