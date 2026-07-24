@@ -8,6 +8,7 @@ import {
   Button,
   Flex,
   HStack,
+  Link,
 } from "@chakra-ui/react";
 import { FaSquareGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 import Typewriter, { type Options } from "typewriter-effect";
@@ -46,7 +47,9 @@ const Hero = () => {
             flexDirection={{ base: "column", sm: "row" }}
             gap={3}
           >
-            <Button>View my Work</Button>
+            <Link href="#projects">
+              <Button>View my Work</Button>
+            </Link>
             <Button variant="outline">Download CV</Button>
           </ButtonGroup>
           <HStack color="fg.muted" gap={3}>

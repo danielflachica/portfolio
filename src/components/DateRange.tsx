@@ -9,9 +9,9 @@ interface Props {
 const DateRange = ({ start, end }: Props) => {
   return (
     <Flex as="span" display="inline-flex" alignItems="center" gap={1}>
-      <Text>{start}</Text>
+      <Text as="span">{start}</Text>
       <LuChevronRight />
-      <Text>{end}</Text>
+      <Text as="span">{end}</Text>
     </Flex>
   );
 };
