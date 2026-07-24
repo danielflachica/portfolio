@@ -26,6 +26,7 @@ const Section = ({
 }: Props) => {
   return (
     <Box
+      bg="bg"
       px={{ base: 5, md: 20, xl: 80 }}
       py={{ base: 5, md: 20 }}
       {...boxProps}
