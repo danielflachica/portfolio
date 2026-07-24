@@ -21,8 +21,9 @@ const Navbar = () => {
             key={link}
             icon={LuHash}
             href={`#${link}`}
-            size="18px"
-            label={link}
+            iconSize="18px"
+            fontSize="18px"
+            label={`${link[0].toUpperCase()}${link.slice(1)}`}
           />
         ))}
       </HStack>

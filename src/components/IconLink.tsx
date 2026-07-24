@@ -6,7 +6,9 @@ interface Props {
   icon: IconType;
   href: string;
   label?: string;
-  size?: string;
+  color?: string;
+  iconSize?: string;
+  fontSize?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
   tooltip?: string;
 }
@@ -15,7 +17,9 @@ const IconLink = ({
   icon: IconComponent,
   href,
   label,
-  size = "16px",
+  color = "fg",
+  iconSize = "16px",
+  fontSize = "16px",
   target = "_self",
   tooltip,
 }: Props) => {
@@ -23,9 +27,9 @@ const IconLink = ({
     <Tooltip content={tooltip} disabled={!tooltip || tooltip === ""} showArrow>
       <a href={href} target={target}>
         <HStack>
-          <IconComponent aria-hidden="true" size={size} />
+          <IconComponent aria-hidden="true" size={iconSize} />
           {label && (
-            <Text textTransform="capitalize" fontSize={size}>
+            <Text color={color} fontSize={fontSize}>
               {label}
             </Text>
           )}

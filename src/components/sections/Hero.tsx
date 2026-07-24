@@ -57,14 +57,14 @@ const Hero = () => {
               <IconLink
                 icon={FaSquareGithub}
                 href={Links.github.profile}
-                size="18px"
+                iconSize="18px"
                 target="_blank"
                 tooltip="GitHub"
               />
               <IconLink
                 icon={FaLinkedin}
                 href={Links.linkedin}
-                size="18px"
+                iconSize="18px"
                 target="_blank"
                 tooltip="LinkedIn"
               />
