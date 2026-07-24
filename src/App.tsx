@@ -10,6 +10,7 @@ import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
             <Projects />
           </Section>
           <Section name="contact" index={6} title="Get in Touch">
-            Contact me form
+            <Contact />
           </Section>
         </GridItem>
         <GridItem area="footer">
