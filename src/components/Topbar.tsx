@@ -3,9 +3,18 @@ import { LuGlobe } from "react-icons/lu";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import Me from "@/data/about";
 
-const Header = () => {
+const Topbar = () => {
   return (
-    <HStack justifyContent="space-between" p={0}>
+    <HStack
+      bg="bg"
+      boxShadow={{ base: "sm", md: "none" }}
+      alignItems="center"
+      justifyContent="space-between"
+      p={0}
+      w="full"
+      pos="fixed"
+      zIndex="2"
+    >
       <Box px={2}>
         <LuGlobe />
       </Box>
@@ -17,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Topbar;

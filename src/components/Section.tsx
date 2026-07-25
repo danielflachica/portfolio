@@ -30,6 +30,8 @@ const Section = ({
       id={name}
       px={{ base: 5, md: 20, xl: 80 }}
       py={{ base: 5, md: 20 }}
+      pos="relative"
+      zIndex="1"
       {...boxProps}
     >
       {displayHeader && (
