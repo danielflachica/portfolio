@@ -1,3 +1,4 @@
+import { SCROLL_OFFSET } from "@/constants/layout";
 import { useEffect } from "react";
 
 const useSmoothScroll = () => {
@@ -13,8 +14,14 @@ const useSmoothScroll = () => {
       const section = document.querySelector(href);
       if (!section) return;
 
+      const sectionPos = section.getBoundingClientRect().top;
+      const offsetPos = sectionPos + window.pageYOffset - SCROLL_OFFSET;
+
       e.preventDefault();
-      section.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: offsetPos,
+        behavior: "smooth",
+      });
     };
 
     document.addEventListener("click", handleClick);
