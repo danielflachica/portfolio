@@ -1,6 +1,4 @@
-import { Box, HStack, type BoxProps } from "@chakra-ui/react";
-import { LuHash } from "react-icons/lu";
-import IconLink from "./IconLink";
+import { Box, HStack, Link, type BoxProps } from "@chakra-ui/react";
 import Links from "@/data/links";
 
 const Navbar = ({ ...boxProps }: BoxProps) => {
@@ -19,14 +17,16 @@ const Navbar = ({ ...boxProps }: BoxProps) => {
     >
       <HStack gap={12} hideBelow="md" justifyContent="center">
         {Links.nav.map((link) => (
-          <IconLink
+          <Link
             key={link}
-            icon={LuHash}
             href={`#${link}`}
-            iconSize="18px"
             fontSize="18px"
-            label={`${link[0].toUpperCase()}${link.slice(1)}`}
-          />
+            aria-current="page"
+            _currentPage={{
+              // color: "fg.subtle",
+              fontWeight: "black",
+            }}
+          >{`${link[0].toUpperCase()}${link.slice(1)}`}</Link>
         ))}
       </HStack>
     </Box>
