@@ -1,5 +1,15 @@
 import type { Project } from "@/types/Project";
-import { Card, Flex, Heading, Image, Link, Text, Wrap } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Card,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+  Wrap,
+} from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { LuExternalLink } from "react-icons/lu";
 import defaultPhoto from "@/assets/projects/project-default-unsplash.jpg";
@@ -14,37 +24,51 @@ const ProjectCard = ({
   project: { name, description, photo, link, start, end, skills },
 }: Props) => {
   return (
-    <Card.Root flexDirection={{ base: "column", md: "row" }} overflow="hidden">
-      <Image
-        objectFit="cover"
-        loading="lazy"
-        width={{ base: "100%", md: "250px" }}
-        src={photo ?? defaultPhoto}
-        alt={name}
-      />
+    <Card.Root flexDirection="column" overflow="hidden">
+      <Box pos="relative">
+        <Image
+          objectFit="cover"
+          loading="lazy"
+          width="full"
+          src={photo ?? defaultPhoto}
+          alt={name}
+        />
+        {start && (
+          <Badge
+            pos="absolute"
+            top="2"
+            insetStart="2"
+            bg="bg.emphasized"
+            size="sm"
+            px={2}
+            py={1}
+          >
+            <Text color="fg">
+              <DateRange start={start} end={end} />
+            </Text>
+          </Badge>
+        )}
+        {link && (
+          <Box pos="absolute" top="2" insetEnd="2">
+            <Tooltip
+              content="Visit Project"
+              positioning={{ placement: "left" }}
+              showArrow
+            >
+              <Link href={link} target="_blank">
+                <LuExternalLink size="24px" />
+              </Link>
+            </Tooltip>
+          </Box>
+        )}
+      </Box>
       <Card.Body>
         <Card.Title mb="2">
           <Flex justifyContent="space-between" alignItems="flex-start" gap={4}>
             <Heading size="lg">{name}</Heading>
-            {link && (
-              <Tooltip
-                content="Visit Project"
-                positioning={{ placement: "left" }}
-                showArrow
-              >
-                <Link href={link} target="_blank" mt="0.3em" flexShrink={0}>
-                  <LuExternalLink />
-                </Link>
-              </Tooltip>
-            )}
           </Flex>
         </Card.Title>
         <Card.Description as="div">
-          {start && end && (
-            <Text color="fg" mb={2}>
-              <DateRange start={start} end={end} />
-            </Text>
-          )}
           <Text>{description}</Text>
         </Card.Description>
         {skills && (
