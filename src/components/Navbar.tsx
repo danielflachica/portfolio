@@ -1,7 +1,10 @@
 import { Box, HStack, Link, type BoxProps } from "@chakra-ui/react";
 import Links from "@/data/links";
+import useActiveSection from "@/hooks/useActiveSection";
 
 const Navbar = ({ ...boxProps }: BoxProps) => {
+  const activeID = useActiveSection(Links.nav);
+
   return (
     <Box
       as="header"
@@ -16,17 +19,18 @@ const Navbar = ({ ...boxProps }: BoxProps) => {
       {...boxProps}
     >
       <HStack gap={12} hideBelow="md" justifyContent="center">
-        {Links.nav.map((link) => (
+        {Links.nav.map((id) => (
           <Link
-            key={link}
-            href={`#${link}`}
+            key={id}
+            href={`#${id}`}
             fontSize="18px"
-            aria-current="page"
-            _currentPage={{
-              // color: "fg.subtle",
-              fontWeight: "black",
-            }}
-          >{`${link[0].toUpperCase()}${link.slice(1)}`}</Link>
+            color={id === activeID ? "fg" : "fg.muted"}
+            fontWeight={id === activeID ? "black" : "normal"}
+            textTransform="capitalize"
+            transition="font-weight 0.2s ease-in-out"
+          >
+            {id}
+          </Link>
         ))}
       </HStack>
     </Box>
