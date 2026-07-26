@@ -37,11 +37,8 @@ const Projects = () => {
         </HStack>
         <Carousel.ItemGroup>
           {projects.map((project, index) => (
-            <Carousel.Item
-              key={project.name.replaceAll(" ", "-")}
-              index={index}
-            >
-              <ProjectCard key={project.name} project={project} />
+            <Carousel.Item key={index} index={index}>
+              <ProjectCard project={project} />
             </Carousel.Item>
           ))}
         </Carousel.ItemGroup>
