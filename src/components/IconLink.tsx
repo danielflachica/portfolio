@@ -34,6 +34,11 @@ const IconLink = ({
               fontSize={fontSize}
               truncate
               maxW={{ base: "200px", md: "250px" }}
+              _hover={{
+                textDecoration: "underline",
+                textDecorationColor: "fg.subtle",
+                textUnderlineOffset: "3px",
+              }}
             >
               {label}
             </Text>
