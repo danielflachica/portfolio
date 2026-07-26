@@ -39,7 +39,7 @@ const ProjectCard = ({
             )}
           </Flex>
         </Card.Title>
-        <Card.Description>
+        <Card.Description as="div">
           {start && end && (
             <Text color="fg" mb={2}>
               <DateRange start={start} end={end} />
