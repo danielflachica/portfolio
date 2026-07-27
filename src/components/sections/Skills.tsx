@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} gap={4}>
       {skillCategories.map(({ category, skills }: SkillCategory) => (
-        <Card.Root key={category}>
+        <Card.Root key={category} className="animate-on-scroll">
           <Card.Header>
             <Heading
               size={{ base: "xl", md: "2xl" }}

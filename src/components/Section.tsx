@@ -36,6 +36,7 @@ const Section = ({
     >
       {displayHeader && (
         <Flex
+          className="animate-on-scroll"
           direction="column"
           gap={{ base: 3, md: 4 }}
           mb={{ base: 4, md: 8 }}

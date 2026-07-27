@@ -14,7 +14,13 @@ const Projects = () => {
   const projectsPerPage = useBreakpointValue({ base: 1, md: 3 }) ?? 1;
 
   return (
-    <Box overflow="hidden" w={{ base: "sm", md: "full" }} mx="auto" p={0}>
+    <Box
+      className="animate-on-scroll"
+      overflow="hidden"
+      w={{ base: "sm", md: "full" }}
+      mx="auto"
+      p={0}
+    >
       <Carousel.Root
         slideCount={projects.length}
         slidesPerPage={projectsPerPage}

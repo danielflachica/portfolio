@@ -26,7 +26,7 @@ const About = () => {
     >
       <Box>
         {/* Profile Card */}
-        <HStack gap={4}>
+        <HStack className="animate-on-scroll" gap={4}>
           <Avatar.Root>
             <Avatar.Fallback name={username} />
             <Avatar.Image src={ProfilePic} />
@@ -41,16 +41,16 @@ const About = () => {
 
         {/* Description */}
         <Stack gap={4} mt={{ base: 3, md: 6 }}>
-          <Text>
+          <Text className="animate-on-scroll">
             I'm a software developer based in {location}. I build websites,
             design solutions, and am open to collaboration.
           </Text>
-          <Text>
+          <Text className="animate-on-scroll">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
             delectus accusantium. Recusandae, veniam sit necessitatibus, laborum
             illum dolorum obcaecati velit aspernatur non pariatur.
           </Text>
-          <Text>
+          <Text className="animate-on-scroll">
             Veniam sit necessitatibus, oluptas quidem delectus. Neque tempore
             nostrum exercitationem.
           </Text>
@@ -59,7 +59,7 @@ const About = () => {
 
       <Box>
         {/* Overview */}
-        <Card.Root>
+        <Card.Root className="animate-on-scroll">
           <Card.Body>
             <HStack>
               <Circle bg="red.500" size="10px" />

@@ -10,7 +10,7 @@ const EducationCard = ({
   education: { school, degree, award, start, end },
 }: Props) => {
   return (
-    <Card.Root>
+    <Card.Root className="animate-on-scroll">
       <Card.Header>
         <HStack justifyContent="space-between" alignItems="flex-start">
           <Stack>

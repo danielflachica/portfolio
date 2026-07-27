@@ -3,7 +3,7 @@ import { Button, Card, Field, Input, Stack, Textarea } from "@chakra-ui/react";
 const ContactForm = () => {
   return (
     <form>
-      <Card.Root>
+      <Card.Root className="animate-on-scroll">
         <Card.Header>
           <Card.Title>Contact Me</Card.Title>
           <Card.Description>

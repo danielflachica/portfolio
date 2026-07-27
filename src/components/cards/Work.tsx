@@ -19,7 +19,7 @@ const WorkCard = ({
   work: { role, company, start, end, summary, details, skills },
 }: Props) => {
   return (
-    <Card.Root>
+    <Card.Root className="animate-on-scroll">
       <Card.Header>
         <HStack justifyContent="space-between" alignItems="flex-start">
           <Stack>

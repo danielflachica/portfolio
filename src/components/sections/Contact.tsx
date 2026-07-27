@@ -22,23 +22,27 @@ const Contact = () => {
       gapY={{ base: 6, md: 0 }}
     >
       <VStack align="flex-start" gap={{ base: 4, md: 6 }}>
-        <Heading size={{ base: "xl", md: "2xl" }} fontWeight="bold">
+        <Heading
+          className="animate-on-scroll"
+          size={{ base: "xl", md: "2xl" }}
+          fontWeight="bold"
+        >
           Let's build something great!
         </Heading>
 
-        <Text color="fg.muted">
+        <Text className="animate-on-scroll" color="fg.muted">
           Whether you have a project in mind, a role you think I'd be a good fit
           for, or just want to say hi, I'd love to hear from you.
         </Text>
 
-        <HStack gap={2}>
+        <HStack className="animate-on-scroll" gap={2}>
           <Circle bg="green.500" size="10px" />
           <Text fontSize="sm" color="fg.muted">
             Available for full-time &amp; freelance roles
           </Text>
         </HStack>
 
-        <VStack align="flex-start" gap={3}>
+        <VStack className="animate-on-scroll" align="flex-start" gap={3}>
           <IconLink
             icon={MdEmail}
             href={`mailto:${Me.email}`}
@@ -63,7 +67,7 @@ const Contact = () => {
           />
         </VStack>
 
-        <Text fontSize="sm" color="fg.muted">
+        <Text className="animate-on-scroll" fontSize="sm" color="fg.muted">
           I'll respond as soon as I can, usually within 12 hours.
         </Text>
       </VStack>
