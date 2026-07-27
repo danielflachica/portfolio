@@ -8,12 +8,16 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  CodeBlock,
 } from "@chakra-ui/react";
+import { shikiAdapter } from "@/lib/shikiAdapter";
+import { useColorMode } from "@/components/ui/color-mode";
 import Me from "@/data/about";
 import ProfilePic from "../../assets/profile_pic.jpg";
 
 const About = () => {
   const { email, username, location, taglines, ...aboutMe } = Me; // Exclude properties from the "aboutMe" code string
+  const { colorMode } = useColorMode();
   const aboutMeCode =
     `const me = ` +
     JSON.stringify(aboutMe, null, 2).replace(/"([^"]+)":/g, "$1:");
@@ -61,25 +65,39 @@ const About = () => {
         {/* Overview */}
         <Card.Root className="animate-on-scroll">
           <Card.Body>
-            <HStack>
-              <Circle bg="red.500" size="10px" />
-              <Circle bg="green.500" size="10px" />
-              <Circle bg="bg.emphasized" size="10px" />
-              <Code color="fg.muted" fontSize="small" ml={2} variant="subtle">
-                ~/about.ts
-              </Code>
-            </HStack>
-            <Box mt={2} overflowX="auto">
-              <Code
-                color="fg.muted"
-                fontSize="small"
-                p={0}
-                variant="plain"
-                w="100%"
+            <CodeBlock.AdapterProvider value={shikiAdapter}>
+              <CodeBlock.Root
+                code={aboutMeCode}
+                bg="none"
+                border={0}
+                borderRadius={0}
+                language="javascript"
+                meta={{ colorScheme: colorMode }}
               >
-                <pre>{aboutMeCode}</pre>
-              </Code>
-            </Box>
+                <CodeBlock.Header m={0} p={0} minH={0}>
+                  <HStack>
+                    <Circle bg="red.500" size="10px" />
+                    <Circle bg="green.500" size="10px" />
+                    <Circle bg="bg.emphasized" size="10px" />
+                    <CodeBlock.Title>
+                      <Code
+                        color="fg.muted"
+                        fontSize="small"
+                        ml={2}
+                        variant="subtle"
+                      >
+                        ~/about.ts
+                      </Code>
+                    </CodeBlock.Title>
+                  </HStack>
+                </CodeBlock.Header>
+                <CodeBlock.Content mt={4}>
+                  <CodeBlock.Code>
+                    <CodeBlock.CodeText p={0} />
+                  </CodeBlock.Code>
+                </CodeBlock.Content>
+              </CodeBlock.Root>
+            </CodeBlock.AdapterProvider>
           </Card.Body>
         </Card.Root>
       </Box>
