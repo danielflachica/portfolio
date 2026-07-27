@@ -37,6 +37,7 @@ import illustrator from "./illustrator.svg";
 import invision from "./invision.svg";
 import vite from "./vite.svg";
 import vscode from "./vscode.svg";
+import jquery from "./jquery.svg";
 
 export const logos = {
   react,
@@ -72,4 +73,5 @@ export const logos = {
   invision,
   vite,
   vscode,
+  jquery,
 };

@@ -7,6 +7,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { label: "JavaScript", logo: logos.javascript },
       { label: "TypeScript", logo: logos.typescript },
+      { label: "jQuery", logo: logos.jquery },
       { label: "React", logo: logos.react },
       { label: "Vue.js", logo: logos.vuejs },
       { label: "HTML5", logo: logos.html5 },
