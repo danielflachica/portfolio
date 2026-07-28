@@ -34,7 +34,10 @@ const ContactForm = () => {
               <Field.Label>
                 Subject <Field.RequiredIndicator />
               </Field.Label>
-              <Input placeholder="What would you like to discuss?" />
+              <Input
+                placeholder="What would you like to discuss?"
+                spellCheck="true"
+              />
               <Field.ErrorText>This field is required</Field.ErrorText>
             </Field.Root>
             <Field.Root required>
@@ -42,9 +45,10 @@ const ContactForm = () => {
                 Message <Field.RequiredIndicator />
               </Field.Label>
               <Textarea
-                placeholder="Enter your message here"
                 autoresize
+                placeholder="Enter your message here"
                 maxH="10lh"
+                spellCheck="true"
               />
               <Field.ErrorText>This field is required</Field.ErrorText>
             </Field.Root>
