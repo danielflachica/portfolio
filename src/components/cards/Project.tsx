@@ -24,51 +24,43 @@ const ProjectCard = ({
   project: { name, description, photo, link, start, end, skills },
 }: Props) => {
   return (
-    <Card.Root flexDirection="column" overflow="hidden">
-      <Box pos="relative">
-        <Image
-          objectFit="cover"
-          loading="lazy"
-          width="full"
-          src={photo ?? defaultPhoto}
-          alt={name}
-        />
-        {start && (
-          <Badge
-            pos="absolute"
-            top="2"
-            insetStart="2"
-            bg="bg.emphasized"
-            size="sm"
-            px={2}
-            py={1}
-          >
-            <Text color="fg">
-              <DateRange start={start} end={end} />
-            </Text>
-          </Badge>
-        )}
-        {link && (
-          <Box pos="absolute" top="2" insetEnd="2">
-            <Tooltip
-              content="Visit Project"
-              positioning={{ placement: "left" }}
-              showArrow
-            >
-              <Link href={link} target="_blank">
-                <LuExternalLink size="24px" />
-              </Link>
-            </Tooltip>
-          </Box>
-        )}
-      </Box>
-      <Card.Body>
+    <Card.Root pos="relative" overflow="hidden" color="white" minH="360px">
+      {/* Background image layer */}
+      <Image
+        pos="absolute"
+        inset={0}
+        w="full"
+        h="full"
+        objectFit="cover"
+        src={photo ?? defaultPhoto}
+        alt={name}
+        aria-hidden="true"
+      />
+
+      {/* Dark gradient for text legibility */}
+      <Box
+        pos="absolute"
+        inset={0}
+        bgGradient="to-t"
+        gradientFrom="blackAlpha.700"
+        gradientTo="blackAlpha.200"
+      />
+
+      {/* Actual content, sits above both layers */}
+      <Card.Body
+        pos="absolute"
+        bottom={0}
+        zIndex={1}
+        h="auto"
+        mt="auto"
+        className="bg-glass fade"
+      >
         <Card.Title mb="2">
           <Flex justifyContent="space-between" alignItems="flex-start" gap={4}>
             <Heading size="lg">{name}</Heading>
           </Flex>
         </Card.Title>
-        <Card.Description as="div">
+        <Card.Description as="div" color="whiteAlpha.700">
           <Text>{description}</Text>
         </Card.Description>
         {skills && (
@@ -84,6 +76,37 @@ const ProjectCard = ({
           </Wrap>
         )}
       </Card.Body>
+
+      {start && (
+        <Badge
+          pos="absolute"
+          top="2"
+          insetStart="2"
+          zIndex={1}
+          variant="surface"
+          size="sm"
+          px={2}
+          py={1}
+        >
+          <Text color="fg">
+            <DateRange start={start} end={end} />
+          </Text>
+        </Badge>
+      )}
+
+      {link && (
+        <Box pos="absolute" top="2" insetEnd="2" zIndex={1}>
+          <Tooltip
+            content="Visit Project"
+            positioning={{ placement: "left" }}
+            showArrow
+          >
+            <Link href={link} target="_blank">
+              <LuExternalLink size="24px" />
+            </Link>
+          </Tooltip>
+        </Box>
+      )}
     </Card.Root>
   );
 };

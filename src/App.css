@@ -3,10 +3,27 @@
   font-size: 22px !important;
 }
 
-.bg-glass {
+.bg-glass:not(.fade) {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px); /* Safari support */
+}
+
+.bg-glass.fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* Safari support */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.06) 100%
+  ) !important;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%);
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
+  z-index: -1;
 }
 
 @keyframes fadeUp {
