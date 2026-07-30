@@ -13,13 +13,12 @@ const Footer = () => {
       color="fg.subtle"
       bg="bg"
       justifyContent="center"
-      p={2}
+      p={4}
       pos="relative"
       zIndex="1"
     >
-      <Text fontSize="sm">&copy; {new Date().getFullYear()}</Text>
+      <Text fontSize="md">&copy; {new Date().getFullYear()}</Text>
       <a href={Links.github.project} target="_blank">
-        <Text fontSize="sm">&lt;{Me.username}&nbsp;/&gt;</Text>
         <CodeBlock.AdapterProvider value={shikiAdapter}>
           <CodeBlock.Root
             code={`<${Me.username} />`}
@@ -29,7 +28,7 @@ const Footer = () => {
             language="javascript"
             meta={{ colorScheme: colorMode }}
           >
-            <CodeBlock.Content>
+            <CodeBlock.Content borderRadius={0}>
               <CodeBlock.Code>
                 <CodeBlock.CodeText p={0} />
               </CodeBlock.Code>
@@ -38,7 +37,7 @@ const Footer = () => {
         </CodeBlock.AdapterProvider>
       </a>
       <Middot />
-      <Text fontSize="sm">v1</Text>
+      <Text fontSize="md">v1</Text>
     </HStack>
   );
 };

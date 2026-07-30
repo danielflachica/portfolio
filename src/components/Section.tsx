@@ -45,14 +45,6 @@ const Section = ({
           gap={{ base: 3, md: 4 }}
           mb={{ base: 4, md: 8 }}
         >
-          <Text
-            className="animate-on-scroll"
-            fontSize="sm"
-            color="fg.muted"
-            wordSpacing={10}
-          >
-            {index.toString().padStart(2, "0")} / {name}
-          </Text>
           <Box className="animate-on-scroll">
             <CodeBlock.AdapterProvider value={shikiAdapter}>
               <CodeBlock.Root
