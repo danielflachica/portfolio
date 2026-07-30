@@ -29,14 +29,14 @@ const config = defineConfig({
           a90: { value: "#f7edff" },
         },
         surface: {
-          a0: { value: "#11151c" },
-          a10: { value: "#24282f" },
-          a20: { value: "#383c43" },
-          a30: { value: "#4e5258" },
-          a40: { value: "#65686e" },
-          a50: { value: "#7d8084" },
-          a60: { value: "#95989c" },
-          a70: { value: "#afb1b4" },
+          a0: { value: "#11151C" },
+          a10: { value: "#1A2029" },
+          a20: { value: "#2A313C" },
+          a30: { value: "#3D4553" },
+          a40: { value: "#545D6B" },
+          a50: { value: "#6E7684" },
+          a60: { value: "#8E939B" },
+          a70: { value: "#AFB1B4" },
         },
         surfaceTonal: {
           a0: { value: "#122A42" },
@@ -92,7 +92,7 @@ const config = defineConfig({
           emphasized: {
             value: {
               _light: "{colors.primary.a70}",
-              _dark: "{colors.surface.a30}",
+              _dark: "{colors.surfaceTonal.a0}",
             },
           },
           inverted: {
@@ -212,13 +212,13 @@ const config = defineConfig({
           solid: { value: "{colors.primary.a0}" },
           contrast: { value: "{colors.white}" },
           fg: {
-            value: { _light: "{colors.white}", _dark: "{colors.primary.a0}" },
+            value: { _light: "{colors.white}", _dark: "{colors.primary.a60}" },
           },
           muted: { value: "{colors.primary.a90}" },
           subtle: {
             value: {
               _light: "{colors.primary.a30}",
-              _dark: "{colors.primary.a80}",
+              _dark: "{colors.surfaceTonal.a10}",
             },
           },
           emphasized: { value: "{colors.primary.a60}" },
