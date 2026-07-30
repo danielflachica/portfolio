@@ -5,16 +5,16 @@ const config = defineConfig({
     tokens: {
       colors: {
         primary: {
-          a0: { value: "#4322ff" },
-          a10: { value: "#4d4aff" },
-          a20: { value: "#5b65ff" },
-          a30: { value: "#6b7bff" },
-          a40: { value: "#7d90ff" },
-          a50: { value: "#91a4ff" },
-          a60: { value: "#a5b7ff" },
-          a70: { value: "#bbc9ff" },
-          a80: { value: "#d1dbff" },
-          a90: { value: "#e8edff" },
+          a0: { value: "#234876" },
+          a10: { value: "#396FB2" },
+          a20: { value: "#497EC0" },
+          a30: { value: "#638EC5" },
+          a40: { value: "#7C9FCA" },
+          a50: { value: "#97B1D0" },
+          a60: { value: "#B1C2D7" },
+          a70: { value: "#CAD4E0" },
+          a80: { value: "#DFE4E9" },
+          a90: { value: "#F2F3F5" },
         },
         accent: {
           a0: { value: "#b222ff" },
@@ -39,14 +39,14 @@ const config = defineConfig({
           a70: { value: "#afb1b4" },
         },
         surfaceTonal: {
-          a0: { value: "#141a30" },
-          a10: { value: "#272d42" },
-          a20: { value: "#3b4155" },
-          a30: { value: "#515769" },
-          a40: { value: "#676d7d" },
-          a50: { value: "#7f8391" },
-          a60: { value: "#979ba7" },
-          a70: { value: "#b0b3bc" },
+          a0: { value: "#122A42" },
+          a10: { value: "#2A4254" },
+          a20: { value: "#3C5466" },
+          a30: { value: "#50687A" },
+          a40: { value: "#677F91" },
+          a50: { value: "#8098AA" },
+          a60: { value: "#9CB4C6" },
+          a70: { value: "#BCD4E6" },
         },
         success: {
           a0: { value: "#7dff95" },
@@ -212,16 +212,13 @@ const config = defineConfig({
           solid: { value: "{colors.primary.a0}" },
           contrast: { value: "{colors.white}" },
           fg: {
-            value: {
-              _light: "{colors.white}",
-              _dark: "{colors.primary.a90}",
-            },
+            value: { _light: "{colors.white}", _dark: "{colors.primary.a0}" },
           },
           muted: { value: "{colors.primary.a90}" },
           subtle: {
             value: {
               _light: "{colors.primary.a30}",
-              _dark: "{colors.primary.a10}",
+              _dark: "{colors.primary.a80}",
             },
           },
           emphasized: { value: "{colors.primary.a60}" },
