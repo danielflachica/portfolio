@@ -55,7 +55,7 @@ const ContactForm = () => {
           </Stack>
         </Card.Body>
         <Card.Footer>
-          <Button colorPalette="blue" mb={2} w="full" variant="solid">
+          <Button colorPalette="primary" mb={2} w="full" variant="solid">
             Send Message
           </Button>
         </Card.Footer>

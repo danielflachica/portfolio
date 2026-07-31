@@ -69,7 +69,7 @@ const ProjectCard = ({
               <SkillTag
                 key={skill.label}
                 skill={skill}
-                colorPalette="blue"
+                colorPalette="primary"
                 size="md"
               />
             ))}

@@ -208,7 +208,7 @@ const config = defineConfig({
           },
         },
 
-        blue: {
+        primary: {
           solid: { value: "{colors.primary.a0}" },
           contrast: { value: "{colors.white}" },
           fg: {
@@ -223,6 +223,23 @@ const config = defineConfig({
           },
           emphasized: { value: "{colors.primary.a60}" },
           focusRing: { value: "{colors.primary.a0}" },
+        },
+
+        accent: {
+          solid: { value: "{colors.accent.a0}" },
+          contrast: { value: "{colors.white}" },
+          fg: {
+            value: { _light: "{colors.white}", _dark: "{colors.accent.a0}" },
+          },
+          muted: { value: "{colors.accent.a90}" },
+          subtle: {
+            value: {
+              _light: "{colors.accent.a30}",
+              _dark: "{colors.accent.a80}",
+            },
+          },
+          emphasized: { value: "{colors.accent.a60}" },
+          focusRing: { value: "{colors.accent.a0}" },
         },
       },
     },
