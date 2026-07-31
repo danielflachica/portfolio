@@ -7,15 +7,17 @@ import {
   Button,
   Flex,
   HStack,
-  Link,
+  Image,
   type FlexProps,
 } from "@chakra-ui/react";
 import { FaSquareGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
+import { HERO_MOBILE_MT } from "@/constants/layout";
 import Typewriter, { type Options } from "typewriter-effect";
 import Middot from "../Middot";
 import IconLink from "../IconLink";
 import Me from "@/data/about";
 import Links from "@/data/links";
+import heroImg from "@/assets/hero_md.png";
 
 const Hero = ({ ...flexProps }: FlexProps) => {
   const twConfig: Options = {
@@ -32,14 +34,18 @@ const Hero = ({ ...flexProps }: FlexProps) => {
       justifyContent="start"
       w="full"
       pos="fixed"
-      zIndex="0"
       {...flexProps}
     >
-      <Flex flex="1" px={{ base: 5, md: 20, xl: 80 }} zIndex="0">
+      <Flex
+        flex="1"
+        direction={{ base: "column", md: "row" }}
+        px={{ base: 5, md: 20, xl: 80 }}
+      >
         <VStack
           align={{ base: "center", md: "flex-start" }}
-          justifyContent="center"
+          justifyContent={{ base: "flex-start", md: "center" }}
           flex="1"
+          mt={{ base: HERO_MOBILE_MT, md: 0 }}
           gap={8}
         >
           <Heading fontWeight="black" size={{ base: "5xl", md: "6xl" }}>
@@ -52,14 +58,19 @@ const Hero = ({ ...flexProps }: FlexProps) => {
             pors sodales volutpat.
           </Text>
           <ButtonGroup
-            colorPalette="blue"
+            colorPalette="primary"
             flexDirection={{ base: "column", sm: "row" }}
             gap={3}
           >
-            <Link href="#projects" _hover={{ textDecoration: "none" }}>
-              <Button>View my Work</Button>
-            </Link>
-            <Button variant="outline">Download CV</Button>
+            "
+            <Button asChild>
+              <a href="#projects">View my Work</a>
+            </Button>
+            <Button asChild variant="outline" borderColor="primary.a30">
+              <a href="#" download>
+                Download CV
+              </a>
+            </Button>
           </ButtonGroup>
           <HStack color="fg.muted" gap={3}>
             <Text display="inline-flex" alignItems="center" gap={2}>
@@ -84,7 +95,19 @@ const Hero = ({ ...flexProps }: FlexProps) => {
             </ButtonGroup>
           </HStack>
         </VStack>
-        <Box hideBelow="md" width="30%"></Box>
+
+        <Box flex="1" pos="relative">
+          <Image
+            src={heroImg}
+            alt={Me.name}
+            pos="absolute"
+            bottom="0"
+            right={{ base: "50%", md: 0 }}
+            transform={{ base: "translateX(50%)", md: "none" }}
+            height={{ base: "40dvh", md: "70dvh" }}
+            zIndex="-1"
+          />
+        </Box>
       </Flex>
     </Flex>
   );
