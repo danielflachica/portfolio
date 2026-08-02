@@ -30,10 +30,7 @@ function App() {
           <Topbar />
         </GridItem>
         <GridItem area="main">
-          <Hero
-            height={{ base: SCREEN_HEIGHT, md: HERO_HEIGHT }}
-            bgImage="linear-gradient({colors.surfaceTonal.a10}, {colors.surfaceTonal.a0})"
-          />
+          <Hero height={{ base: SCREEN_HEIGHT, md: HERO_HEIGHT }} />
           <Navbar
             height={NAVBAR_HEIGHT}
             mt={{ base: 0, md: HERO_HEIGHT }}

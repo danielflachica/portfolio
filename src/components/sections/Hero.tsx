@@ -34,6 +34,12 @@ const Hero = ({ ...flexProps }: FlexProps) => {
       justifyContent="start"
       w="full"
       pos="fixed"
+      bg={{
+        _light:
+          "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a50} 0, {colors.surfaceTonal.a70} 60%, transparent 100%)",
+        _dark:
+          "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a10} 0, {colors.surfaceTonal.a0} 60%, transparent 100%)",
+      }}
       {...flexProps}
     >
       <Flex
@@ -66,7 +72,12 @@ const Hero = ({ ...flexProps }: FlexProps) => {
             <Button asChild>
               <a href="#projects">View my Work</a>
             </Button>
-            <Button asChild variant="outline" borderColor="primary.a30">
+            <Button
+              asChild
+              variant="outline"
+              borderColor="primary.a30"
+              _hover={{ bg: "none", color: "fg" }}
+            >
               <a href="#" download>
                 Download CV
               </a>
