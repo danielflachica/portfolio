@@ -78,7 +78,7 @@ const About = () => {
                   <HStack>
                     <Circle bg="red.500" size="10px" />
                     <Circle bg="green.500" size="10px" />
-                    <Circle bg="bg.emphasized" size="10px" />
+                    <Circle bg="border.emphasized" size="10px" />
                     <CodeBlock.Title>
                       <Code
                         color="fg.muted"
