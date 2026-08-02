@@ -35,10 +35,18 @@ const Hero = ({ ...flexProps }: FlexProps) => {
       w="full"
       pos="fixed"
       bg={{
-        _light:
-          "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a50} 0, {colors.surfaceTonal.a70} 60%, transparent 100%)",
-        _dark:
-          "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a10} 0, {colors.surfaceTonal.a0} 60%, transparent 100%)",
+        base: {
+          _light:
+            "radial-gradient(ellipse 80% 100% at 50% 115%, {colors.surfaceTonal.a50} 0, {colors.surfaceTonal.a70} 60%, transparent 100%)",
+          _dark:
+            "radial-gradient(ellipse 80% 100% at 50% 115%, {colors.surfaceTonal.a10} 0, {colors.surfaceTonal.a0} 60%, transparent 100%)",
+        },
+        md: {
+          _light:
+            "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a50} 0, {colors.surfaceTonal.a70} 60%, transparent 100%)",
+          _dark:
+            "radial-gradient(ellipse 60% 100% at 65% 65%, {colors.surfaceTonal.a10} 0, {colors.surfaceTonal.a0} 60%, transparent 100%)",
+        },
       }}
       {...flexProps}
     >
