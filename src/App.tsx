@@ -12,6 +12,7 @@ import Education from "./components/sections/Education";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
+import BackToTopButton from "./components/BackToTopButton";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
           <Footer />
         </GridItem>
       </Grid>
+      <BackToTopButton hideBelow="md" />
     </>
   );
 }
